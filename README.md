@@ -22,36 +22,48 @@ A responsive login and registration component with smooth transitions and animat
 
 ## 🚀 Installation
 
-### Using npm or yarn
+This component library is not yet published to npm. You can use it by cloning the repository:
 
 ```bash
-# npm
-npm install @kayano/vue-components
+# Clone the repository
+git clone https://github.com/KayanoLiam/vue_components.git
 
-# yarn
-yarn add @kayano/vue-components
+# Navigate to the project directory
+cd vue_components
+
+# Install dependencies
+npm install
+# or
+yarn install
 ```
 
-### Direct import in your project
+### Using components in your project
 
-You can also clone this repository and copy the components you need directly into your project.
+After cloning, you can:
+
+1. Copy the components you need from the `src/components` directory to your project
+2. Import them directly from the cloned repository
 
 ## 🔧 Usage
 
-### Global Registration
+### After copying the component to your project
+
+Once you've copied the `LoginRegister.vue` component to your project, you can use it as follows:
+
+#### Global Registration
 
 ```javascript
 // main.ts or main.js
 import { createApp } from 'vue'
 import App from './App.vue'
-import LoginRegister from '@kayano/vue-components/LoginRegister'
+import LoginRegister from './components/LoginRegister.vue'
 
 const app = createApp(App)
 app.component('LoginRegister', LoginRegister)
 app.mount('#app')
 ```
 
-### Local Registration
+#### Local Registration
 
 ```vue
 <template>
@@ -62,7 +74,7 @@ app.mount('#app')
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { LoginRegister } from '@kayano/vue-components'
+import LoginRegister from './components/LoginRegister.vue'
 
 export default defineComponent({
   components: {
